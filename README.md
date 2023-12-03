@@ -1,8 +1,10 @@
 # Terminal Profile Manager
 
+![Alt text](assets/main.png)
+
 ## Introduction
 
-PowerShell is a Python script that utilizes the webview library to create a window and display an HTML interface for managing PowerShell profiles a hacky fix for issue
+PowerShell is a Python script that utilizes the webview library to create a window and display an HTML interface for managing Terminal profiles, a hacky fix for issue
 https://github.com/microsoft/terminal/issues/8914. The script "intelligently" reads the settings file of the Windows Terminal app to retrieve the existing profiles and allows the
 user to reorder them. The modified profiles are then saved back to the settings file.
 
@@ -35,13 +37,13 @@ To use the PowerShell Manager script, follow these steps:
 4. The PowerShell Manager window will open, displaying the profiles in the Windows Terminal settings file.
 5. Reorder the profiles by dragging and dropping them.
 6. Click the "Save" button to save the new profile order to the settings file.
+7. use install-in-terminal.py to install it right in terminal! ![Alt text](./assets/image.png)
 
 ## Configuration
 
 The Profile Manager script includes the following configuration options:
 
 - `width` and `height`: Set the width and height of the window displayed by the webview library.
-- `background_color`: Set the background color of the window.
 - `debug`: Set to True to enable debug mode for webview.
 - styles have been kept similar to windows terminal, also you can change the styles in the styles.css file.
 

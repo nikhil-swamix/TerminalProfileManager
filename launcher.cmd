@@ -1,1 +1,1 @@
-pythonw main.py
+cmd.exe /c /q "pythonw main.py"

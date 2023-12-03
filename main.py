@@ -7,9 +7,15 @@ except Exception as e:
     os.system("pip install webview pythonnet")
     import webview, pythonnet
 
-basepath = f"C:/Users/{os.getlogin()}/AppData/Local/Packages/"
-settings_folder = next((f for f in os.listdir(basepath) if f.startswith("Microsoft.WindowsTerminal")), "")
-setting_file = f"{basepath}{settings_folder}/LocalState/settings.json"
+
+def get_settings_path():
+    basepath = f"C:/Users/{os.getlogin()}/AppData/Local/Packages/"
+    settings_folder = next((f for f in os.listdir(basepath) if f.startswith("Microsoft.WindowsTerminal")), "")
+
+    return f"{basepath}{settings_folder}/LocalState/settings.json"
+
+
+setting_file = get_settings_path()
 
 
 def get_config():
@@ -37,19 +43,24 @@ def set_profiles(profiles_name_order):
     json.dump(conf, open(setting_file, "w"), indent=4)
 
 
-w = webview.create_window(
-    'Terminal Profile Manager',
-    'index.html',
-    background_color='#000',
-    width=360,
-    height=640,
-    # draggable=True,
-    # easy_drag=False,
-)
-w.expose(get_profiles, set_profiles)
+def main():
+    w = webview.create_window(
+        'Terminal Profile Manager',
+        'index.html',
+        background_color='#000',
+        width=360,
+        height=640,
+        # draggable=True,
+        # easy_drag=False,
+    )
+    w.expose(get_profiles, set_profiles)
 
-webview.start(
-    debug=False,
-    http_server=True,
-    # gui="cef",
-)
+    webview.start(
+        debug=False,
+        http_server=True,
+        # gui="cef",
+    )
+
+
+if __name__ == "__main__":
+    main()
