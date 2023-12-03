@@ -51,5 +51,5 @@ w.expose(get_profiles, set_profiles)
 webview.start(
     debug=False,
     http_server=True,
-    gui="cef",
+    # gui="cef",
 )
