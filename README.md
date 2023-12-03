@@ -4,7 +4,7 @@
 
 ## Introduction
 
-PowerShell is a Python script that utilizes the webview library to create a window and display an HTML interface for managing Terminal profiles, a hacky fix for issue
+Python script that utilizes the webview library to create a window and display an HTML interface for managing Terminal profiles, a hacky fix for issue
 https://github.com/microsoft/terminal/issues/8914. The script "intelligently" reads the settings file of the Windows Terminal app to retrieve the existing profiles and allows the
 user to reorder them. The modified profiles are then saved back to the settings file. since terminal watches this file, it will reload the profiles automagically!
 
