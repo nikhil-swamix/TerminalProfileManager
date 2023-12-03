@@ -1,0 +1,37 @@
+/* import roboto condesned */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  background-color: #222;
+  border-radius: 1em;
+  /* overflow: hidden; */
+}
+h1 {
+  color: #fff;
+}
+
+#sortable {
+  /* list-style-type: none; */
+  /* margin: 0; */
+  padding: 0;
+}
+/* #sortable li {
+  margin: 0 3px 3px 3px;
+  padding: 0.4em;
+  padding-left: 1.5em;
+  font-size: 1.4em;
+  height: 18px;
+} */
+#sortable li span {
+  position: absolute;
+  background-color: gray;
+  /* margin-left: -1.3em; */
+}
+
+.oplucent {
+  opacity: 0.5;
+}
