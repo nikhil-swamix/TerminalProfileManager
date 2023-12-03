@@ -1,12 +1,11 @@
-import webview, json, os, pythonnet
+import json, os
 
-# try:
-#     from pythonnet import load
-#     load("coreclr")
-
-# except Exception as e:
-#     print(e)
-#     os.system("winget install Microsoft.DotNet.SDK.7")
+try:
+    import webview, pythonnet
+except Exception as e:
+    os.system("winget install Microsoft.DotNet.SDK.7")
+    os.system("pip install webview pythonnet")
+    import webview, pythonnet
 
 basepath = f"C:/Users/{os.getlogin()}/AppData/Local/Packages/"
 settings_folder = next((f for f in os.listdir(basepath) if f.startswith("Microsoft.WindowsTerminal")), "")
@@ -39,7 +38,7 @@ def set_profiles(profiles_name_order):
 
 
 w = webview.create_window(
-    'powershell Manager',
+    'Terminal Profile Manager',
     'index.html',
     background_color='#000',
     width=360,
@@ -50,8 +49,7 @@ w = webview.create_window(
 w.expose(get_profiles, set_profiles)
 
 webview.start(
-    debug=True,
+    debug=False,
     http_server=True,
     gui="cef",
-    
 )

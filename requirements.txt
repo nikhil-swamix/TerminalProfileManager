@@ -1,1 +1,2 @@
 pywebview
+py2exe
