@@ -53,6 +53,6 @@ The Profile Manager script includes the following configuration options:
 
 ### Urgent Notice!
 
-#### im looking for a job, if you have any openings, please let me know! contacts in resume.
+#### im looking for a job, if you have any openings, please contact! if ur a dev, please refer. contacts in resume.
 
 RESUME : https://docs.google.com/document/d/e/2PACX-1vRvk0ZEqt71qmJDJi-rhPt7zd4Aq3l7gN87BJjEKFZmNK4SQZTbSOKmg3T2OGd-D_SYyMYn3YjibVRj/pub
