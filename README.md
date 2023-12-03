@@ -31,13 +31,12 @@ Before running the script, please make sure you have the following prerequisites
 
 To use the PowerShell Manager script, follow these steps:
 
-1. Make sure all the prerequisites are installed.
-2. Update the `basepath` variable in the script to match the correct path to the `LocalPackages` folder on your system.
-3. Run the script using `python script.py`.
-4. The PowerShell Manager window will open, displaying the profiles in the Windows Terminal settings file.
-5. Reorder the profiles by dragging and dropping them.
-6. Click the "Save" button to save the new profile order to the settings file.
-7. use install-in-terminal.py to install it right in terminal! ![Alt text](./assets/image.png)
+1. try running launcher.pyw, if it works, you can skip to step 4.
+2. Run the script using `python script.py`.
+3. The PowerShell Manager window will open, displaying the profiles in the Windows Terminal settings file.
+4. Reorder the profiles by dragging and dropping them.
+5. Click the "Save" button to save the new profile order to the settings file.
+6. use install-in-terminal.py to install it right in terminal! ![Alt text](./assets/image.png)
 
 ## Configuration
 
