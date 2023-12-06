@@ -3,9 +3,19 @@ import json, os
 try:
     import webview, pythonnet
 except Exception as e:
-    os.system("winget install Microsoft.DotNet.SDK.7")
-    os.system("pip install webview pythonnet")
-    import webview, pythonnet
+    print("This script has dependencies:")
+    print("Python packages: pywebview pythonnet")
+    print("Other dependencies: Microsoft.DotNet.SDK.7")
+    print("You can install them yourself using `pip install pywebview pythonnet` and `winget install Microsoft.DotNet.SDK.7`")
+    print("or they can be installed automatically")
+    ans = input("Would you like them to be installed automatically? (y/n): ").lower()
+    if ans == "yes" or ans == "y":
+        os.system("winget install Microsoft.DotNet.SDK.7")
+        os.system("pip install pywebview pythonnet")
+        import webview, pythonnet
+    else:
+        print("Ok, exiting")
+        exit(0)
 
 
 def get_settings_path():

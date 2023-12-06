@@ -18,10 +18,10 @@
         <h1>Profiles</h1>
       </div>
       <div class="col-auto ms-auto">
-        <button class="btn btn-sm bg-gradient text-white" onclick="setProfiles()">Save</button>
+        <button class="btn btn-sm button" onclick="setProfiles()">Save</button>
       </div>
     </div>
-    <ul id="sortable"></ul>
+    <ul id="profile-list"></ul>
   </body>
   <script>
     profiles = [];
@@ -29,14 +29,14 @@
       profiles = await pywebview.api.get_profiles();
       console.log(profiles);
       profiles.forEach((profile) => {
-        $('#sortable').append(`<li class="ui-state-default rounded-3 p-1 mt-1 ${profile.hidden ? 'oplucent' : ''}">${profile.name}</li>`);
+        $('#profile-list').append(`<li class="profile ui-state-default rounded-2 p-2 mt-1 ${profile.hidden ? 'profile-hidden' : ''}">${profile.name}</li>`);
       });
     };
 
     setProfiles = async () => {
       // check with name of list and sort
       currentProfilesOrder = [];
-      $('#sortable li').each((index, element) => {
+      $('#profile-list li').each((index, element) => {
         currentProfilesOrder.push($(element).text());
       });
       console.log(currentProfilesOrder);
@@ -47,7 +47,7 @@
     $(window).on('pywebviewready', getProfiles);
 
     $(function () {
-      $('#sortable').sortable({
+      $('#profile-list').sortable({
         stop: function (event, ui) {
           console.log('stopped');
         },

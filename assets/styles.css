@@ -1,23 +1,49 @@
-/* import roboto condesned */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+/* Windows Terminal Colors
+
+active tab: #0d0d0c
+titlebar background: #2f2f2e
+main background: #292929
+option background: #323232
+option shadow: #242424
+button background: #3e3f3e
+button blue: #4cc3fe
+button blue hover: #4cc3fe TODO:
+x button red: #bf2a1b
+strong text: #ffffff
+dark text: #000000
+muted text/dropdown arrows/switches: #adadad
+*/
+
+:root {
+  /* Colors */
+  --item--color: #323232;
+  --blue-button: #4cc3fe;
+  --blue-button-hover: #3c9ccd;
+  --strong-text: #ffffff;
+  --dark-text: #000000;
+  --background-color: #292929;
+  --item-shadow: #222222;
+}
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
+  font-family: sans-serif;
+  font-size: 1em;
   line-height: 1.5;
 
-  background-color: #222;
+  background-color: var(--background-color, #222);
   border-radius: 1em;
   /* overflow: hidden; */
 }
+
 h1 {
-  color: #fff;
+  color: var(--strong-text);
+  font-weight:700;
 }
 
-#sortable {
-  /* list-style-type: none; */
-  /* margin: 0; */
+#profile-list {
+  list-style-type: none;
   padding: 0;
+  /* margin: 0; */
 }
 /* #sortable li {
   margin: 0 3px 3px 3px;
@@ -26,12 +52,37 @@ h1 {
   font-size: 1.4em;
   height: 18px;
 } */
-#sortable li span {
+
+/* #sortable li span {
   position: absolute;
   background-color: gray;
-  /* margin-left: -1.3em; */
+  /* margin-left: -1.3em; *\
+} */
+
+.button {
+  color: var(--dark-text, #000000);
+  background-color: var(--blue-button, #4cc3fe);
+}
+.button:hover {
+  color: var(--dark-text, #000000);
+  background-color: var(--blue-button-hover);
 }
 
-.oplucent {
+.profile span {
+  position: absolute;
+}
+
+/*
+TODO: Title bar color
+TODO: Title bar icon
+*/
+.profile {
+  color: var(--strong-text);
+  background-color: var(--item--color, gray);
+  border-width: 1px;
+  border-color: var(--item-shadow);
+}
+
+.profile-hidden {
   opacity: 0.5;
 }
