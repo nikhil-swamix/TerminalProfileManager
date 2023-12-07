@@ -54,6 +54,7 @@ The Profile Manager script includes the following configuration options:
 
 ## Roadmap and Improvements
 
+-   Double click to launch profile
 -   Add a "New" button to create a new profile
 -   Show/Hide Toggle button
 -   Delete Profile button
