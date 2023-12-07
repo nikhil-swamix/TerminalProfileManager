@@ -7,7 +7,7 @@ option background: #323232
 option shadow: #242424
 button background: #3e3f3e
 button blue: #4cc3fe
-button blue hover: #4cc3fe TODO:
+button blue hover: #3c9ccd
 x button red: #bf2a1b
 strong text: #ffffff
 dark text: #000000
@@ -32,32 +32,17 @@ body {
 
   background-color: var(--background-color, #222);
   border-radius: 1em;
-  /* overflow: hidden; */
 }
 
 h1 {
   color: var(--strong-text);
-  font-weight:700;
+  font-weight: 700;
 }
 
 #profile-list {
   list-style-type: none;
   padding: 0;
-  /* margin: 0; */
 }
-/* #sortable li {
-  margin: 0 3px 3px 3px;
-  padding: 0.4em;
-  padding-left: 1.5em;
-  font-size: 1.4em;
-  height: 18px;
-} */
-
-/* #sortable li span {
-  position: absolute;
-  background-color: gray;
-  /* margin-left: -1.3em; *\
-} */
 
 .button {
   color: var(--dark-text, #000000);
