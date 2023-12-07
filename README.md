@@ -18,7 +18,7 @@ back to the settings file. Since terminal watches this file, it will reload the 
 -   Intelligently read settings from `[...]AppData/Local[...]/settings.json` folder irrespective of user name or depend on any static paths.
 -   Color theme matched to Windows Terminal dark mode.
 -   Edit/extend logic using simple Python code and change GUI using HTML and CSS.
--   If Python is already installed, half the setup is done.
+-   Requires only python 3.10 or greater to be installed.
 -   jQuery, jQuery-UI and Bootstrap 5 used for GUI.
 -   Hidden profiles explicitly dimmed.
 
