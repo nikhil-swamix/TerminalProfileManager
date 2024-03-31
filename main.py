@@ -57,7 +57,7 @@ def main():
     w = webview.create_window(
         'Terminal Profile Manager',
         'index.html',
-        background_color='#000',
+        background_color='#000000',
         width=360,
         height=640,
         # draggable=True,
