@@ -18,7 +18,6 @@ back to the settings file. Since terminal watches this file, it will reload the 
 -   Intelligently read settings from `[...]AppData/Local[...]/settings.json` folder irrespective of user name or depend on any static paths.
 -   Color theme matched to Windows Terminal dark mode.
 -   Edit/extend logic using simple Python code and change GUI using HTML and CSS.
--   Requires only python 3.10 or greater to be installed.
 -   jQuery, jQuery-UI and Bootstrap 5 used for GUI.
 -   Hidden profiles explicitly dimmed.
 
@@ -26,7 +25,7 @@ back to the settings file. Since terminal watches this file, it will reload the 
 
 Before running the script, you will be required to:
 
--   Install Python 3.10 or higher _(lower versions may work, you can try and report)_
+-   Install Python 3.10 or higher _(lower versions may work, you can try and report)_ 3.9 works as reported by @bamboo 
 -   While the program is self sufficient to install dependencies, you can install them manually using `pip install -r requirements.txt` in the project directory. Please note Dotnet
     is shipped with many applications, you may already have it installed. so just try running the script first.
 -   `winget` package manager for installing dotnet on the fly. If you don't have `winget` get it from
